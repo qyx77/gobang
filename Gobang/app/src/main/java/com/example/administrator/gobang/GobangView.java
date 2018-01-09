@@ -303,4 +303,23 @@ public class GobangView extends View {
         int invalidateY=(int)(y/mBlockWidth);
         return new Point(invalidateX,invalidateY);
     }
+    public void clear()
+    {
+        mWhitePieceArray.clear();
+        mBlackPieceArray.clear();
+        isWhiteWin=false;
+        isBlackWin=false;
+        isGameOver=false;
+        invalidate();
+    }
+    public void setmBlackPiecePhoto(Bitmap bitmap)
+    {
+        mBlackPiece=bitmap;
+        invalidate();
+    }
+    public void setmWhitePiecePhoto(Bitmap bitmap)
+    {
+        mWhitePiece=bitmap;
+        invalidate();
+    }
 }
